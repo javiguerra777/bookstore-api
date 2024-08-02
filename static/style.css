@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: none;
+}
+main {
+  background-color: whitesmoke;
+}
+.code-container {
+  background-color: #253e52;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
