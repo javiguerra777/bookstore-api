@@ -101,7 +101,7 @@ Example:
 Example:
 ```JSON
 {
-  "id": 1001,
+  "id": 101,
 	"title": "tom and jerry",
 	"author": "A guy",
 	"isbn": "764bdc47-3037-4583-b7b8-6ef1ab7ee0f9",
@@ -125,7 +125,7 @@ Example:
 Example:
 ```JSON
 {
-  "id": 103,
+  "id": 95,
 	"title": "leo messi goat",
 	"author": "Me",
 	"isbn": "764bdc47-3037-4583-b7b8-6ef1ab7ee0f3",

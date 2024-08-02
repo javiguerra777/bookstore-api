@@ -34,7 +34,11 @@ app.get('/api/books', async (req, res) => {
   }
 });
 app.post('/api/books', (req, res) => {
-  res.status(201).json(req.body);
+  const response = {
+    ...req.body,
+    id: 101,
+  }
+  res.status(201).json(response);
 });
 app.get('/api/books/:id', async (req, res) => {
   try {
@@ -46,8 +50,8 @@ app.get('/api/books/:id', async (req, res) => {
 });
 app.put('/api/books/:id', (req, res) => {
   const response = {
+    ...req.body,
     id: Number(req.params.id),
-    ...req.body
   };
   res.status(200).json(response);
 });
@@ -59,8 +63,10 @@ app.delete('/api/books/:id', (req, res) => {
   res.status(200).json(response);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+if(process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`Server is running on port http://localhost:${port}`);
+  });
+}
 
 module.exports = app;
