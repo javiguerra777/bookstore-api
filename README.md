@@ -29,10 +29,10 @@ This is a simple Bookstore API built with Node.js, Express, and Sequelize. It al
    ```
 3. Create a `.env` file in the root directory and add your database configutation
    ```.env
-   DB_HOST=your_database_host
-   DB_USER=your_database_user
-   DB_PASS=your_database_password
-   DB_NAME=your_database_name
+   DB_HOST="your database host, EX: localhost"
+   DB_USER="your username login to your database, EX: johndoe"
+   DB_PASSWORD="your users password to login to your database, EX: password"
+   DB_NAME="the name of your database, EX: development_bookstore"
    DB_PORT=3306
    ```
 4. Run the server
