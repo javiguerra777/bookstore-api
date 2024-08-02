@@ -13,8 +13,11 @@ main {
   padding: 10px;
   border-radius: 5px;
 }
-p {
+p, a {
   font-size: 1.2em;
+}
+a:hover {
+  color: blue;
 }
 h2 {
   font-size: 1.6em;
