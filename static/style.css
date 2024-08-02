@@ -2,13 +2,25 @@ body {
   margin: 0;
   padding: 0;
   overflow: none;
+  font-family: "Inter", sans-serif
 }
 main {
   background-color: whitesmoke;
 }
 .code-container {
-  background-color: #253e52;
+  background-color: #282828;
   color: white;
   padding: 10px;
   border-radius: 5px;
+}
+p {
+  font-size: 1.2em;
+}
+h2 {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.4em;
+  font-weight: 500;
 }

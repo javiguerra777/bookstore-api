@@ -4,21 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Store API Documentation</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="h-screen w-screen overflow-auto p-4">
-    <section>
-      <h1 class="text-4xl font-semibold">Book Store Api</h1>
+    <section class="mb-10">
+      <h1 class="text-4xl font-semibold mb-2">Book Store Api</h1>
       <p>A free fake and reliable book store API for testing and prototyping</p>
     </section>
-    <section>
-      <h2 class="text-2xl font-medium">Try It</h2>
-      <p>Run this code here, in the web browser's console or from any site and then view the results</p>
+    <section class="mb-10">
+      <h2 class="mb-2">Try It</h2>
+      <p class="mb-4">Run this code here, in the web browser's console or from any site and then view the results</p>
       <section class="code-container">
         <code>
-          fetch('https://url will come soon after deployment')
+          fetch('https://bookstore-api-six.vercel.app/api/books')
           <br>
           .then(response => response.json())
           <br>
@@ -26,13 +29,13 @@
         </code>
       </section>
     </section>
-    <section>
-      <h2 class="text-2xl font-medium">When to use</h2>
+    <section class="mb-10">
+      <h2 class="mb-2">When to use</h2>
       <p>This book store api is a free online REST API that you can use <strong>whenever you need some fake data from a book store.</strong> It can be for a Front End project, a code demo needed, or to test how dynamic data will load on your application</p>
     </section>
-    <section>
-      <h2 class="text-2xl font-medium">Resources</h2>
-      <p>This API comes with 1 resource</p>
+    <section class="mb-10">
+      <h2 class="mb-2">Resources</h2>
+      <p class="mb-4">This API comes with 1 resource</p>
       <ul>
         <li class="flex flex-row">
           <a href="/api/books" class="mr-6 w-16 underline">/books</a>
@@ -40,9 +43,9 @@
         </li>
       </ul>
     </section>
-    <section>
-      <h2 class="text-2xl font-medium">Routes</h2>
-      <p>All HTTP methods are supported. You can use the following routes for your requests.</p>
+    <section class="mb-10">
+      <h2 class="mb-2">Routes</h2>
+      <p class="mb-4">All HTTP methods are supported. You can use the following routes for your requests.</p>
       <ul>
         <li class="flex flex-row">
           <p class="mr-8 w-16">GET</p>
@@ -67,14 +70,289 @@
       </ul>
     </section>
     <section>
-      <h2 class="text-2xl font-medium">Guide</h2>
-      <p>Take a look at the examples below using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" class="underline">Fetch API</a>, but this API can be accessed using other languages and libraries.</p>
-      <h3>Getting all Books</h3>
-      <h3>Getting a Books</h3>
-      <h3>Creating a new Book</h3>
-      <h3>Updating an Existing Book</h3>
-      <h3>Deleting an Existing Book</h3>
-      <h3>Limiting the Amount of Books you Fetch</h3>
+      <h2 class="mb-2">Guide</h2>
+      <p class="mb-6">Take a look at the examples below using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" class="underline">Fetch API</a>, but this API can be accessed using other languages and libraries.</p>
+      <h3 class="mb-4">Getting all Books</h3>
+      <section class="code-container mb-6">
+        <code>
+          fetch('https://bookstore-api-six.vercel.app/api/books')
+          <br>
+          .then(response => response.json())
+          <br>
+          .then(json => console.log(json))
+        </code>
+      </section>
+      <p class="mb-4">Output Below:</p>
+      <section class="code-container mb-6">
+        <code>
+          [
+          <br>
+          <section class="ml-4">
+            {
+              <br>
+              <section class="ml-6">
+                id: 1,
+                <br>
+                title: 1,
+                <br>
+                author: 1,
+                <br>
+                isbn: 1,
+                <br>
+                publishedDate: 1,
+                <br>
+                publisher: 1,
+                <br>
+                genre: 1,
+                <br>
+                description: 1,
+                <br>
+                pageCount: 1,
+                <br>
+                language: 1,
+                <br>
+                createdAt: 1,
+                <br>
+                updatedAt: 1
+                <br>  
+              </section>
+              }
+              <br>    
+          </section>
+          ...rest of the books
+          <br>
+          ]
+        </code>
+      </section>
+      <h3 class="mb-4">Getting a Book</h3>
+      <section class="code-container mb-6">
+        <code>
+          fetch('https://bookstore-api-six.vercel.app/api/books/1')
+          <br>
+          .then(response => response.json())
+          <br>
+          .then(json => console.log(json))
+        </code>
+      </section>
+      <p class="mb-4">Output Below:</p>
+      <section class="code-container mb-6">
+        <code>
+          <section>
+            {
+              <br>
+              <section class="ml-6">
+                id: 1,
+                <br>
+                title: 1,
+                <br>
+                author: 1,
+                <br>
+                isbn: 1,
+                <br>
+                publishedDate: 1,
+                <br>
+                publisher: 1,
+                <br>
+                genre: 1,
+                <br>
+                description: 1,
+                <br>
+                pageCount: 1,
+                <br>
+                language: 1,
+                <br>
+                createdAt: 1,
+                <br>
+                updatedAt: 1
+                <br>  
+              </section>
+              }
+              <br>    
+          </section>
+        </code>
+      </section>
+      <h3 class="mb-4">Creating a New Book</h3>
+      <section class="code-container mb-6">
+        <code>
+          fetch('https://bookstore-api-six.vercel.app/api/books', {
+            <br>
+            <section class="ml-4">
+            method: 'POST',
+            <br>
+            body: JSON.stringify({
+              <br>
+              title: 'New Book',
+              <br>
+              author: 'New Author',
+              <br>
+              isbn: 'New ISBN',
+              <br>
+            }),
+            <br>
+            headers: {
+              <br>
+              'Content-Type': 'application/json'
+              <br>
+            }
+            <br>
+            </section>
+          })
+          <br>
+          .then(response => response.json())
+          <br>
+          .then(json => console.log(json))
+        </code>
+      </section>
+      <p class="mb-4">Output Below:</p>
+      <section class="code-container mb-6">
+        <code>
+          <section>
+            {
+              <br>
+              <section class="ml-6">
+                id: 101,
+                <br>
+                title: 'New Book',
+                <br>
+                author: 'New Author',
+                <br>
+                isbn: 'New ISBN',
+                <br>
+              </section>
+              }
+              <br>    
+          </section>
+        </code>
+      </section>
+      <h3 class="mb-4">Updating an Existing Book</h3>
+      <section class="code-container mb-6">
+        <code>
+          fetch('https://bookstore-api-six.vercel.app/api/books/1', {
+            <br>
+            <section class="ml-4">
+            method: 'PUT',
+            <br>
+            body: JSON.stringify({
+              <br>
+              title: 'New Title',
+              <br>
+          }),
+          <br>
+          headers: {
+            <br>
+            'Content-Type': 'application/json'
+            <br>
+          }
+          <br>
+          </section>
+          })
+          <br>
+          .then(response => response.json())
+          <br>
+          .then(json => console.log(json))
+        </code>
+      </section>
+      <p class="mb-4">Output Below:</p>
+      <section class="code-container mb-6">
+        <code>
+          <section>
+            {
+              <br>
+              <section class="ml-6">
+                id: 1,
+                <br>
+                title: 'New Title',
+                <br>
+              </section>
+              }
+              <br>    
+          </section>
+        </code>
+      </section>
+      <h3 class="mb-4">Deleting an Existing Book</h3>
+      <section class="code-container mb-6">
+        <code>
+          fetch('https://bookstore-api-six.vercel.app/api/books/1', {
+            <br>
+            <section class="ml-4">
+            method: 'DELETE'
+            <br>
+          </section>
+          })
+          <br>
+          .then(response => response.json())
+          <br>
+          .then(json => console.log(json))
+        </code>
+      </section>
+      <p class="mb-4">Output Below:</p>
+      <section class="code-container mb-6">
+          <section>
+            {
+              <br>
+              <section class="ml-6">
+                id: 1,
+                <br>
+                message: 'Book deleted',
+                <br>
+              </section>
+              }
+              <br>    
+          </section>
+        </code>
+      </section>
+      <h3 class="mb-4">Limiting the Amount of Books you Fetch</h3>
+      <section class="code-container mb-6">
+        <code>
+          fetch('https://bookstore-api-six.vercel.app/api/books?amount=30')
+          <br>
+          .then(response => response.json())
+          <br>
+          .then(json => console.log(json))
+        </code>
+      </section>
+      <p class="mb-4">Output Below:</p>
+      <section class="code-container mb-6">
+        <code>
+          [
+          <br>
+          <section class="ml-4">
+            {
+              <br>
+              <section class="ml-6">
+                id: 1,
+                <br>
+                title: 1,
+                <br>
+                author: 1,
+                <br>
+                isbn: 1,
+                <br>
+                publishedDate: 1,
+                <br>
+                publisher: 1,
+                <br>
+                genre: 1,
+                <br>
+                description: 1,
+                <br>
+                pageCount: 1,
+                <br>
+                language: 1,
+                <br>
+                createdAt: 1,
+                <br>
+                updatedAt: 1
+                <br>  
+              </section>
+              }
+              <br>    
+          </section>
+          ...rest of the books
+          <br>
+          ]
+        </code>
+      </section>
     </section>
   </main>
 </body>
