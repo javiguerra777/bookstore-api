@@ -33,7 +33,7 @@ This is a simple Bookstore API built with Node.js, Express, and Sequelize. It al
    DB_USER=your_database_user
    DB_PASS=your_database_password
    DB_NAME=your_database_name
-   DB_PORT=3500
+   DB_PORT=3306
    ```
 4. Run the server
    ```bash
