@@ -1,6 +1,6 @@
 # Bookstore API
 
-This is a simple Bookstore API built with Node.js, Express, and Sequelize. It allows you to perform CRUD operations on a collection of books.
+This is a simple Bookstore API built with Node.js, Express, and a `db.json` file. It allows you to perform CRUD operations on a collection of books.
 
 ## Features
 
@@ -13,7 +13,8 @@ This is a simple Bookstore API built with Node.js, Express, and Sequelize. It al
 
 - Node.js
 - npm
-- MySQL
+- JSON Files
+- Reading from File System
 
 ## Installation
 
@@ -27,15 +28,7 @@ This is a simple Bookstore API built with Node.js, Express, and Sequelize. It al
    ```bash
    npm install
    ```
-3. Create a `.env` file in the root directory and add your database configutation
-   ```.env
-   DB_HOST="your database host, EX: localhost"
-   DB_USER="your username login to your database, EX: johndoe"
-   DB_PASSWORD="your users password to login to your database, EX: password"
-   DB_NAME="the name of your database, EX: development_bookstore"
-   DB_PORT=3306
-   ```
-4. Run the server
+3. Run the server
    ```bash
    npm run dev
    ```
@@ -157,7 +150,7 @@ Example:
 The server serves static files from the `static` directory. Ensure your `index.html` and other static assets are placed in this directory
 
 ## Database
-The application uses Sequelize to interact with a MySQL database. Ensure your database is configured correctly in the `.env` file.
+The application uses the File System in Node to interact with the `db.json` file, so make sure you have the `db.json` file and contains an array of books.
 
 ## License
 This project is licensed under the MIT License
