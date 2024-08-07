@@ -37,7 +37,8 @@ app.get('/api/books/:id', async (req, res) => {
   try {
     const result = fs.readFileSync(path.join(__dirname, 'db.json'), 'utf-8');
     const book = JSON.parse(result).find(book => book.id === Number(req.params.id));
-    res.status(200).json(book);
+    const response = book ? book : { message: 'Book not found' };
+    res.status(200).json(response);
   }catch(error) {
     res.status(500).json({ error: error.message });
   }
